@@ -7,7 +7,7 @@ exports.run = (client, message, args, Discord) => {
 	// Banear a la mención '@'
   member.ban().then((member) => {
     // Notificar al servidor de que el usuario ha sido baneado
-    message.channel.send(memberUsername + ' baneado del servidor.');
+    message.channel.send('A sido baneado correctamente.');
   });
 };
 

@@ -7,7 +7,7 @@ exports.run = (client, message, args, Discord) => {
 	// Kickear a la mención '@'
   member.kick().then((member) => {
     // Notificar al servidor de que el usuario ha sido kickeado
-    message.channel.send(memberUsername + ' ha sido kickeado del servidor.');
+    message.channel.send('Ha sido kickeado del servidor.');
   });
 };
 
