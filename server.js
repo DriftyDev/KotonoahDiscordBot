@@ -7,6 +7,7 @@ let prefix = datos.prefix
 
 client.on("ready", () => {
 console.log("Encendido")
+bot.user.setActivity('Hyliedz', { type: 'WATCHING'}).catch(console.error);
 });
 
 client.on("guildMemberAdd", (member) => {
@@ -33,13 +34,6 @@ if(message.content.startsWith(prefix+"MUERTE AL DIOS VANLIEDZ")){
 });
 }
 
-if(message.content.startsWith("2999")){
-  message.channel.send({embed: {
-    color: 3447003,
-    description: "¡**3000**! ¡Gané!"
-  }
-});
-}
 
 client.on("message", message =>{
 var Mensajes = ["Tienes razón", "Probablemente", "Definitivamente si", "Definitivamente no", "Ni de coña bro", "Si", "No"]
@@ -50,6 +44,15 @@ if(message.content.startsWith(prefix+"8ball")){
 }
 })
 
+client.on("message", message =>{
+  var Hyliedzmemes = ["", "Probablemente", "Definitivamente si", "Definitivamente no", "Ni de coña bro", "Si", "f"]
+  var aleatorio = Math.floor(Math.random()*(Mensajes.length));
+  if(message.content.startsWith(prefix+"meme")){
+    message.channel.send(Hyliedzmemes[aleatorio]);
+  
+  }
+  })
+
 
 
 if(message.content.startsWith(prefix+"help")){
@@ -58,7 +61,6 @@ if(message.content.startsWith(prefix+"help")){
   .addField("**Moderación**", "`!hr kick [Persona]`")
   .addField("**Memes**", "`!hr meme`")
   .addField("**Búsquedas**", "`!hr search [Cosa]` **(DESARROLLO)**")
-  .addField("**Prefijo**", "`!hr prefix [Prefijo]` **(DESARROLLO)**")
 
   message.channel.send({embed});
 
@@ -80,12 +82,6 @@ client.on("message", message => {
   } catch (err) {
   }
 
-  if(command == 'prefix') {
-    if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("No tienes los permisos necesarios.")
-    if(!args[0]) return message.channel.send("¡Tienes que poner un prefix!")
-    prefix_db.agregar('${message.guild.id}', args[0])
-    return message.channel.send("El prefix acaba de ser cambiado a"+args[0])
-  }
   
 });
 client.login(datos.token);
