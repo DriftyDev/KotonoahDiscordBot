@@ -60,14 +60,25 @@ client.on("message", message =>{
 if(message.content.startsWith(prefix+"help")){
   const embed = new Discord.MessageEmbed()
   .setDescription("**Ayuda**")
-  .addField("**Moderación**", "`!hr kick [Persona]`")
-  .addField("**Memes**", "`!hr meme`")
+  .addField("**Moderación**", "`!hr m help`")
+  .addField("**Memes**", "`!hr meme` **(DESARROLLO)**")
   .addField("**Búsquedas**", "`!hr search [Cosa]` **(DESARROLLO)**")
 
   message.channel.send({embed});
+}
+if(message.content.startsWith(prefix+"m help")){
+  const embed = new Discord.MessageEmbed()
+  .setDescription("**Ayuda de Moderación**")
+  .addField("**Banear**", "`!hr ban [Persona]`")
+  .addField("**Limpiar chat**", "`!hr tempban [Persona]` **(DESARROLLO)**")
+  .addField("**Kickear**", "`!hr kick [Persona]`")
+  .addField("**Limpiar chat**", "`!hr clear [Número de mensajes]` **(DESARROLLO)**")
 
+  message.channel.send({embed});
 }
 
+
+  
 });
 client.on("message", message => {
   if(message.content.indexOf(datos.prefix) !== 0) return;
