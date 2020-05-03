@@ -7,10 +7,9 @@ let prefix = datos.prefix
 
 client.on("ready", () => {
 console.log("Encendido")
-
-setInterval(function()  {
-  bot.user.setActivity("Jugando a Hyliedz", { type: "WATCHING"})
-})
+client.user.setActivity('Hyliedz Retro', { type: 'PLAYING' })
+  .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
+  .catch(console.error);
 });
 
 client.on("guildMemberAdd", (member) => {
