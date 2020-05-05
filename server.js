@@ -46,15 +46,6 @@ if(message.content.startsWith(prefix+"8ball")){
 }
 })
 
-client.on("message", message =>{
-  var Hyliedzmemes = ["", "Probablemente", "Definitivamente si", "Definitivamente no", "Ni de coña bro", "Si", "f"]
-  var aleatorio = Math.floor(Math.random()*(Mensajes.length));
-  if(message.content.startsWith(prefix+"meme")){
-    message.channel.send(Hyliedzmemes[aleatorio]);
-  
-  }
-  })
-
 
 
 if(message.content.startsWith(prefix+"help")){
