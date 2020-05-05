@@ -83,6 +83,21 @@ if(message.content.startsWith(prefix+"m help")){
   message.channel.send({embed});
 }
 
+if(message.content.startsWith(prefix+"unban")) {
+  let embed = new Discord.RichEmbed()
+  .setColor(colours.redlight)
+  .setAuthor(`${message.guild.name} Mensajes de Mod`, message.guild.iconURL)
+  .addField("Tipo de moderación:", "UNBAN")
+  .addField("Moderado en:", `${bannedMember.username} (${bannedMember.id})`)
+  .addField("Moderador:", message.author.username)
+  .addField("Razón:", reason)
+  .addField("Fecha:", message.createdAt.toLocaleString())
+
+      let sChannel = message.find(c => c.name === "general")
+      sChannel.send(embed)
+}
+
+
 
   
 });
