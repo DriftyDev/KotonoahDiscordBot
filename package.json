@@ -9,19 +9,12 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "canvas": "^2.6.1",
         "discord.js": "^12.1.1",
-        "ffmpeg": "0.0.4",
         "graceful-fs": "^4.2.3",
-        "mega-dtbs": "^0.1.17",
-        "mkdirp": "^1.0.4",
         "opusscript": "0.0.7",
-        "path": "^0.12.7",
         "prebuild-install": "^5.3.3",
         "random-puppy": "^1.1.0",
-        "request": "^2.88.2",
         "snekfetch": "^4.0.4",
-        "stack": "^0.1.0",
-        "youtube-search": "^1.1.4"
+        "stack": "^0.1.0"
     }
 }
