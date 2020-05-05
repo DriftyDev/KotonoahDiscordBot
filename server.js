@@ -12,17 +12,12 @@ client.user.setActivity('Hyliedz Retro', { type: 'PLAYING' })
   .catch(console.error);
 });
 
-client.on("guildMemberAdd", (member) => {
-
-  console.log("Un nuevo usuario ha venido")
-  memeber.send("¡Bienvenido a **Hyliedz Retro**!");
-});
-
 client.on("message", (message) => {
 if(message.content.startsWith(prefix+"secret")){
   const embed = new Discord.MessageEmbed()
   .setDescription("**COMANDOS SECRETOS**")
   .addField("**Vanliedz**", "`!hr MUERTE AL DIOS VANLIEDZ`")
+  .addField("**Invocar a Vanliedz**", "`!hr Van inv`")
 
   message.channel.send({embed});
 
@@ -36,15 +31,35 @@ if(message.content.startsWith(prefix+"MUERTE AL DIOS VANLIEDZ")){
 });
 }
 
+if(message.content.startsWith(prefix+"meme")){
+  number = 13;
+  var random = Math.floor (Math.random() * (number - 1 + 1)) + 1;
+  switch (random) {
+      case 1: message.channel.send("**Meme**", {files: ["./images/1.jpg"]}); break;
+      case 2: message.channel.send("**Meme**", {files: ["./images/2.jpg"]}); break;
+      case 3: message.channel.send("**Meme**", {files: ["./images/3.jpg"]}); break;
+      case 4: message.channel.send("**Meme**", {files: ["./images/4.jpg"]}); break;
+      case 5: message.channel.send("**Meme**", {files: ["./images/5.gif"]}); break;
+      case 6: message.channel.send("**Meme**", {files: ["./images/6.gif"]}); break;
+      case 7: message.channel.send("**Meme**", {files: ["./images/meme1.jpg"]}); break;
+      case 8: message.channel.send("**Meme**", {files: ["./images/meme2.jpg"]}); break;
+      case 9: message.channel.send("**Meme**", {files: ["./images/meme3.jpg"]}); break;
+      case 10: message.channel.send("**Meme**", {files: ["./images/meme4.jpg"]}); break;
+      case 11: message.channel.send("**Meme**", {files: ["./images/meme5.jpg"]}); break;
+      case 12: message.channel.send("**Meme**", {files: ["./images/meme6.jpg"]}); break;
+      case 13: message.channel.send("**Meme**", {files: ["./images/meme7.jpg"]}); break;
+      case 14: message.channel.send("**Meme**", {files: ["./images/meme8.jpg"]}); break;
+  }
 
-client.on("message", message =>{
-var Mensajes = ["Tienes razón", "Probablemente", "Definitivamente si", "Definitivamente no", "Ni de coña bro", "Si", "No"]
-var aleatorio = Math.floor(Math.random()*(Mensajes.length));
-if(message.content.startsWith(prefix+"8ball")){
-  message.channel.send(Mensajes[aleatorio]);
+  }
 
-}
-})
+
+if(message.content.startsWith(prefix+"Van inv")){
+  var Mensajes
+  message.channel.send("Has invocado a **Vanliedz**", {files: ["./images/1.jpg"]});
+  }
+
+
 
 
 
@@ -52,8 +67,8 @@ if(message.content.startsWith(prefix+"help")){
   const embed = new Discord.MessageEmbed()
   .setDescription("**Ayuda**")
   .addField("**Moderación**", "`!hr m help`")
-  .addField("**Memes**", "`!hr meme` **(DESARROLLO)**")
-  .addField("**Búsquedas**", "`!hr search [Cosa]` **(DESARROLLO)**")
+  .addField("**Memes**", "`!hr meme` **(BUSCO MEMES HAY SOLO 14)**")
+  .addField("**Perritos :D**", "`!hr dog`")
 
   message.channel.send({embed});
 }
