@@ -28,7 +28,7 @@ exports.run = (client, message, args, Discord) => {
       console.error(err);
     }
     // Notify developers
-    console.log("[IMPORTANT]: Reloads finished.");
+    console.log("[IMPORTANT]: Baneo terminado.");
   } else {
     message.reply("No tienes permisos para ejecutar ese comando.");
     console.log("[INFO]: The command couldn't be executed because the user is not an administrator.");

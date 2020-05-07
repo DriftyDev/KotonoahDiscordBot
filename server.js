@@ -32,15 +32,15 @@ if(message.content.startsWith(prefix+"MUERTE AL DIOS VANLIEDZ")){
 }
 
 if(message.content.startsWith(prefix+"meme")){
-  number = 13;
+  number = 20;
   var random = Math.floor (Math.random() * (number - 1 + 1)) + 1;
   switch (random) {
-      case 1: message.channel.send("**Meme**", {files: ["./images/1.jpg"]}); break;
-      case 2: message.channel.send("**Meme**", {files: ["./images/2.jpg"]}); break;
-      case 3: message.channel.send("**Meme**", {files: ["./images/3.jpg"]}); break;
-      case 4: message.channel.send("**Meme**", {files: ["./images/4.jpg"]}); break;
-      case 5: message.channel.send("**Meme**", {files: ["./images/5.gif"]}); break;
-      case 6: message.channel.send("**Meme**", {files: ["./images/6.gif"]}); break;
+      case 1: message.channel.send("**Compra miembro**", {files: ["./images/1.jpg"]}); break;
+      case 2: message.channel.send("**COVID-19**", {files: ["./images/2.jpg"]}); break;
+      case 3: message.channel.send("**Mute**", {files: ["./images/3.jpg"]}); break;
+      case 4: message.channel.send("**Expresiones de users**", {files: ["./images/4.jpg"]}); break;
+      case 5: message.channel.send("**C-O-F-F-I-N  D-A-N-C-E**", {files: ["./images/5.gif"]}); break;
+      case 6: message.channel.send("**¡Alto!, ¡FBI!, Wacho**", {files: ["./images/6.gif"]}); break;
       case 7: message.channel.send("**Meme**", {files: ["./images/meme1.jpg"]}); break;
       case 8: message.channel.send("**Meme**", {files: ["./images/meme2.jpg"]}); break;
       case 9: message.channel.send("**Meme**", {files: ["./images/meme3.jpg"]}); break;
@@ -49,15 +49,25 @@ if(message.content.startsWith(prefix+"meme")){
       case 12: message.channel.send("**Meme**", {files: ["./images/meme6.jpg"]}); break;
       case 13: message.channel.send("**Meme**", {files: ["./images/meme7.jpg"]}); break;
       case 14: message.channel.send("**Meme**", {files: ["./images/meme8.jpg"]}); break;
+      case 15: message.channel.send("**Drifty...**", {files: ["./images/meme10.png"]}); break;
+      case 16: message.channel.send("**Spook...**", {files: ["./images/meme9.jpg"]}); break;
+      case 17: message.channel.send("**Eze...**", {files: ["./images/meme11.jpg"]}); break;
+      case 18: message.channel.send("**Xray.png...**", {files: ["./images/meme12.jpg"]}); break;
+      case 19: message.channel.send("**Ban.exe...**", {files: ["./images/meme13.jpg"]}); break;
+      case 20: message.channel.send("**Drifty...**", {files: ["./images/meme14.jpg"]}); break;
   }
 
   }
 
 
 if(message.content.startsWith(prefix+"Van inv")){
-  var Mensajes
   message.channel.send("Has invocado a **Vanliedz**", {files: ["./images/1.jpg"]});
   }
+
+
+  if(message.content.startsWith(prefix+"kg")){
+    message.channel.send("Hola, soy **Kotonoah** y he abandonado este servidor, porque necesito actualizarme para volverme a meter ve a este link"+" https://www.kotonoah.tk");
+    }
 
 
 
@@ -67,7 +77,7 @@ if(message.content.startsWith(prefix+"help")){
   const embed = new Discord.MessageEmbed()
   .setDescription("**Ayuda**")
   .addField("**Moderación**", "`!hr m help`")
-  .addField("**Memes**", "`!hr meme` **(BUSCO MEMES HAY SOLO 14)**")
+  .addField("**Memes**", "`!hr meme`")
   .addField("**Perritos :D**", "`!hr dog`")
 
   message.channel.send({embed});
@@ -76,25 +86,14 @@ if(message.content.startsWith(prefix+"m help")){
   const embed = new Discord.MessageEmbed()
   .setDescription("**Ayuda de Moderación**")
   .addField("**Banear**", "`!hr ban [Persona]`")
-  .addField("**Limpiar chat**", "`!hr tempban [Persona]` **(DESARROLLO)**")
+  .addField("**Banear por un tiempo**", "`!hr tempban [Persona] [Tiempo]` **(DESARROLLO)**")
   .addField("**Kickear**", "`!hr kick [Persona]`")
   .addField("**Limpiar chat**", "`!hr clear [Número de mensajes]` **(DESARROLLO)**")
+  .addField("**Mutear**", "`!hr mute [Persona]` **(DESARROLLO)**")
+  .addField("**Mutear por un tiempo**", "`!hr tempmute [Persona] [Tiempo]` **(DESARROLLO)**")
+  .addField("**Unmutear**", "`!hr unmute [Persona]` **(DESARROLLO)**")
 
   message.channel.send({embed});
-}
-
-if(message.content.startsWith(prefix+"unban")) {
-  let embed = new Discord.RichEmbed()
-  .setColor(colours.redlight)
-  .setAuthor(`${message.guild.name} Mensajes de Mod`, message.guild.iconURL)
-  .addField("Tipo de moderación:", "UNBAN")
-  .addField("Moderado en:", `${bannedMember.username} (${bannedMember.id})`)
-  .addField("Moderador:", message.author.username)
-  .addField("Razón:", reason)
-  .addField("Fecha:", message.createdAt.toLocaleString())
-
-      let sChannel = message.find(c => c.name === "general")
-      sChannel.send(embed)
 }
 
 
