@@ -54,7 +54,7 @@ if(message.content.startsWith(prefix+"meme")){
       case 17: message.channel.send("**Eze...**", {files: ["./images/meme11.jpg"]}); break;
       case 18: message.channel.send("**Xray.png...**", {files: ["./images/meme12.jpg"]}); break;
       case 19: message.channel.send("**Ban.exe...**", {files: ["./images/meme13.jpg"]}); break;
-      case 20: message.channel.send("**Drifty...**", {files: ["./images/meme14.jpg"]}); break;
+      case 20: message.channel.send("**hacker.exe**", {files: ["./images/meme14.jpg"]}); break;
   }
 
   }
