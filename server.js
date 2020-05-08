@@ -78,8 +78,11 @@ if(message.content.startsWith(prefix+"Van inv")){
     message.channel.send("Hola, soy **Kotonoah** y he abandonado este servidor, porque necesito actualizarme para volverme a meter ve a este link"+" https://www.kotonoah.tk");
     }
 
+
+    let member = message.mentions.members.first();
+
     if(message.content.startsWith(prefix+"kiss")){
-      message.channel.send(":v", {files: ["./images/7.gif"]});
+      message.channel.send("**" + message.author.username + " besó a** " + member, {files: ["./images/7.gif"]});
       }
 
 
