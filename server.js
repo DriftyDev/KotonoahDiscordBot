@@ -18,7 +18,7 @@ if(message.content.startsWith(prefix+"secret")){
   .setDescription("**COMANDOS SECRETOS**")
   .addField("**Vanliedz**", "`!hr MUERTE AL DIOS VANLIEDZ`")
   .addField("**Invocar a Vanliedz**", "`!hr Van inv`")
-  .addField("**Invocar a Vanliedz**", "`!hr MUERTE A KOTONOAH`")
+  .addField("**Matar a Kotonoah**", "`!hr MUERTE A KOTONOAH`")
 
   message.channel.send({embed});
 
