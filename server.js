@@ -18,6 +18,7 @@ if(message.content.startsWith(prefix+"secret")){
   .setDescription("**COMANDOS SECRETOS**")
   .addField("**Vanliedz**", "`!hr MUERTE AL DIOS VANLIEDZ`")
   .addField("**Invocar a Vanliedz**", "`!hr Van inv`")
+  .addField("**Invocar a Vanliedz**", "`!hr MUERTE A KOTONOAH`")
 
   message.channel.send({embed});
 
@@ -27,6 +28,14 @@ if(message.content.startsWith(prefix+"MUERTE AL DIOS VANLIEDZ")){
   message.channel.send({embed: {
     color: 3447003,
     description: "**MUERTE A TI PVTO**"
+  }
+});
+}
+
+if(message.content.startsWith(prefix+"MUERTE A KOTONOAH")){
+  message.channel.send({embed: {
+    color: 3447003,
+    description: "**NO-O QUIERO-O MOR-ÍR-R**"
   }
 });
 }
