@@ -1,5 +1,6 @@
-const Discord = require("discord.js");
-const  client = new Discord.Client();
+
+const Discord = require('discord.js');
+const client = new Discord.Client();
 const datos = require("./datos.json");
 const {Client, Attachment} = require("discord.js");
 let prefix = datos.prefix
@@ -37,7 +38,7 @@ if(message.content.startsWith(prefix+"kiss")){
 });
 
 if(message.content.startsWith(prefix+"MUERTE AL DIOS VANLIEDZ")){
-  message.channel.send({embed: {
+  ({embed: {
     color: 3447003,
     description: "**MUERTE A TI PVTO**"
   }
