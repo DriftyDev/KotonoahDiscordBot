@@ -52,6 +52,14 @@ if(message.content.startsWith(prefix+"virgen")){
     }
   });
   }
+
+  if(message.content.startsWith(prefix+"mentalidad")){
+      message.channel.send({embed: {
+        color: 3447003,
+        description: "**Tu edad mental es de " + random1 + " años**"
+      }
+    });
+    }
   
 
 if(message.content.startsWith(prefix+"meme")){
