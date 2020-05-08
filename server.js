@@ -19,6 +19,8 @@ if(message.content.startsWith(prefix+"secret")){
   .addField("**Vanliedz**", "`!hr MUERTE AL DIOS VANLIEDZ`")
   .addField("**Invocar a Vanliedz**", "`!hr Van inv`")
   .addField("**Matar a Kotonoah**", "`!hr MUERTE A KOTONOAH`")
+  .addField("**Besar a alguien**", "`!hr kiss [Persona]`")
+  .addField("**Adivinar cuando perderás la virginidad**", "`!hr virgen`")
 
   message.channel.send({embed});
 
@@ -39,6 +41,18 @@ if(message.content.startsWith(prefix+"MUERTE A KOTONOAH")){
   }
 });
 }
+
+if(message.content.startsWith(prefix+"virgen")){
+  number1 = 70;
+  var random1 = Math.floor (Math.random() * (number1 - 1 + 1)) + 1;
+ 
+    message.channel.send({embed: {
+      color: 3447003,
+      description: "**La perderás con " + random1 + " años**"
+    }
+  });
+  }
+  
 
 if(message.content.startsWith(prefix+"meme")){
   number = 20;
