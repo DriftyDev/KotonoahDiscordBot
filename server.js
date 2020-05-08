@@ -78,6 +78,9 @@ if(message.content.startsWith(prefix+"Van inv")){
     message.channel.send("Hola, soy **Kotonoah** y he abandonado este servidor, porque necesito actualizarme para volverme a meter ve a este link"+" https://www.kotonoah.tk");
     }
 
+    if(message.content.startsWith(prefix+"kiss")){
+      message.channel.send(":v", {files: ["./images/7.gif"]});
+      }
 
 
 
