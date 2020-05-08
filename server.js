@@ -21,6 +21,9 @@ if(message.content.startsWith(prefix+"secret")){
   .addField("**Matar a Kotonoah**", "`!hr MUERTE A KOTONOAH`")
   .addField("**Besar a alguien**", "`!hr kiss [Persona]`")
   .addField("**Adivinar cuando perderás la virginidad**", "`!hr virgen`")
+  .addField("**Adivinar tu edad mental**", "`!hr mentalidad`")
+  .addField("**Adivinar tu IQ**", "`!hr IQ`")
+
 
   message.channel.send({embed});
 
@@ -54,12 +57,24 @@ if(message.content.startsWith(prefix+"virgen")){
   }
 
   if(message.content.startsWith(prefix+"mentalidad")){
+  number2 = 125;
+  var random2 = Math.floor (Math.random() * (number2 - 1 + 1)) + 1;
       message.channel.send({embed: {
         color: 3447003,
-        description: "**Tu edad mental es de " + random1 + " años**"
+        description: "**Tu edad mental es de " + random2 + " años**"
       }
     });
     }
+
+    if(message.content.startsWith(prefix+"IQ")){
+      number3 = 230;
+      var random3 = Math.floor (Math.random() * (number3 - 1 + 1)) + 1;
+          message.channel.send({embed: {
+            color: 3447003,
+            description: "**Tu edad mental es de " + random3 + " años**"
+          }
+        });
+        }
   
 
 if(message.content.startsWith(prefix+"meme")){
