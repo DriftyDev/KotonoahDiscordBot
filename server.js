@@ -71,7 +71,7 @@ if(message.content.startsWith(prefix+"virgen")){
       var random3 = Math.floor (Math.random() * (number3 - 1 + 1)) + 1;
           message.channel.send({embed: {
             color: 3447003,
-            description: "**Tu edad mental es de " + random3 + " años**"
+            description: "**Tu IQ es de " + random3 + "**"
           }
         });
         }
