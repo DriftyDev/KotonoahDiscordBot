@@ -29,6 +29,17 @@ if(message.content.startsWith(prefix+"secret")){
 
 }
 
+let member = message.mentions.members.first();
+
+if(message.content.startsWith(prefix+"kiss")){
+  message.channel.send({embed: {
+    color: 3447003,
+    description: "**" + message.author.username + " besó a " + member + "**",
+    files: ["./images/7.gif"]
+  }
+});
+}
+
 if(message.content.startsWith(prefix+"MUERTE AL DIOS VANLIEDZ")){
   message.channel.send({embed: {
     color: 3447003,
@@ -75,7 +86,8 @@ if(message.content.startsWith(prefix+"virgen")){
           }
         });
         }
-  
+
+ 
 
 if(message.content.startsWith(prefix+"meme")){
   number = 20;
@@ -113,17 +125,7 @@ if(message.content.startsWith(prefix+"Van inv")){
 
   if(message.content.startsWith(prefix+"kg")){
     message.channel.send("Hola, soy **Kotonoah** y he abandonado este servidor, porque necesito actualizarme para volverme a meter ve a este link"+" https://www.kotonoah.tk");
-    }
-
-
-    let member = message.mentions.members.first();
-
-    if(message.content.startsWith(prefix+"kiss")){
-      message.channel.send("**" + message.author.username + " besó a** " + member, {files: ["./images/7.gif"]});
-      }
-
-
-
+    }   
 
 if(message.content.startsWith(prefix+"help")){
   const embed = new Discord.MessageEmbed()
@@ -150,8 +152,7 @@ if(message.content.startsWith(prefix+"m help")){
 
 
 
-  
-});
+}); 
 client.on("message", message => {
   if(message.content.indexOf(datos.prefix) !== 0) return;
 
@@ -167,6 +168,5 @@ client.on("message", message => {
   } catch (err) {
   }
 
-  
 });
 client.login(datos.token);
