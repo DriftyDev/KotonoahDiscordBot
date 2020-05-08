@@ -32,13 +32,9 @@ if(message.content.startsWith(prefix+"secret")){
 let member = message.mentions.members.first();
 
 if(message.content.startsWith(prefix+"kiss")){
-  message.channel.send({embed: {
-    color: 3447003,
-    description: "**" + message.author.username + " besó a " + member + "**",
-    files: ["./images/7.gif"]
+  message.channel.send("**" + message.author.username + " besó a " + member + "**", {files: ["./images/7.gif"]});
   }
 });
-}
 
 if(message.content.startsWith(prefix+"MUERTE AL DIOS VANLIEDZ")){
   message.channel.send({embed: {
@@ -152,7 +148,7 @@ if(message.content.startsWith(prefix+"m help")){
 
 
 
-}); 
+
 client.on("message", message => {
   if(message.content.indexOf(datos.prefix) !== 0) return;
 
