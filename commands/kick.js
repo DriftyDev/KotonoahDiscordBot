@@ -10,6 +10,9 @@ exports.run = (client, message, args, Discord) => {
     // Notificar al servidor de que el usuario ha sido kickeado
     message.channel.send('Ha sido kickeado del servidor.');
   });
+}else {
+  message.reply("No tienes permisos para ejecutar ese comando.");
+  console.log("[INFO]: The command couldn't be executed because the user is not an administrator.");
 }
 };
 
