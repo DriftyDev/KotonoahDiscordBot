@@ -7,7 +7,7 @@ let prefix = datos.prefix
 
 client.on("ready", () => {
 console.log("Encendido")
-client.user.setActivity('Hyliedz Retro', { type: 'PLAYING' })
+client.user.setActivity('Putas', { type: 'WATCHING' })
   .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
   .catch(console.error);
 });
