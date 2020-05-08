@@ -1,4 +1,5 @@
 exports.run = (client, message, args, Discord) => {
+  if(message.member.hasPermission("ADMINISTRATOR")){
 	// Tomar la primera mención del mensaje
   let member = message.mentions.members.first(); // Array / arreglo
 
@@ -9,6 +10,7 @@ exports.run = (client, message, args, Discord) => {
     // Notificar al servidor de que el usuario ha sido kickeado
     message.channel.send('Ha sido kickeado del servidor.');
   });
+}
 };
 
 /*
