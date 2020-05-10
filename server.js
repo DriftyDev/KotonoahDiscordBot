@@ -13,6 +13,12 @@ client.user.setActivity('Hyliedz Retro', { type: 'PLAYING' })
   .catch(console.error);
 });
 
+client.on('guildMemberAdd', member => {
+  const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
+  if (!channel) return;
+  channel.send(`Welcome to the server, ${member}`);
+});
+
 client.on("message", (message) => {
 if(message.content.startsWith(prefix+"secret")){
   const embed = new Discord.MessageEmbed()
@@ -32,10 +38,7 @@ if(message.content.startsWith(prefix+"secret")){
 
 let member = message.mentions.members.first();
 
-if(message.content.startsWith(prefix+"kiss")){
-  message.channel.send("**" + message.author.username + " besó a " + member + "**", {files: ["./images/7.gif"]});
-  }
-});
+
 
 if(message.content.startsWith(prefix+"MUERTE AL DIOS VANLIEDZ")){
   ({embed: {
@@ -110,6 +113,8 @@ if(message.content.startsWith(prefix+"meme")){
       case 18: message.channel.send("**Xray.png...**", {files: ["./images/meme12.jpg"]}); break;
       case 19: message.channel.send("**Ban.exe...**", {files: ["./images/meme13.jpg"]}); break;
       case 20: message.channel.send("**hacker.exe**", {files: ["./images/meme14.jpg"]}); break;
+      case 21: message.channel.send("**Spook.exe**", {files: ["./images/meme15.jpg"]}); break;
+      case 22: message.channel.send("**Katto.exe**", {files: ["./images/meme16.jpg"]}); break;
   }
 
   }
@@ -159,11 +164,12 @@ client.on("message", message => {
 
   // Procesador de comandos
   try {
-    console.log("[INFO]: " + message.author.tag + " executed '" + command + "'");
+    console.log("[INFORMACIÓN]: " + "@" + message.author.tag + " ha ejecutado el comando '" + command + "'");
     let commandFile = require(`./commands/${command}.js`);
     commandFile.run(client, message, args, Discord);
   } catch (err) {
   }
 
+});
 });
 client.login(datos.token);
