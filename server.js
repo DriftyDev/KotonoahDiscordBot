@@ -90,7 +90,7 @@ if(message.content.startsWith(prefix+"virgen")){
  
 
 if(message.content.startsWith(prefix+"meme")){
-  number = 61;
+  number = 62;
   var random = Math.floor (Math.random() * (number - 1 + 1)) + 1;
   switch (random) {
       case 1: message.channel.send("**Compra miembro**", {files: ["./images/1.jpg"]}); break;
@@ -153,8 +153,7 @@ if(message.content.startsWith(prefix+"meme")){
       case 59: message.channel.send("**Meme**", {files: ["./images/meme52.jpg"]}); break;
       case 60: message.channel.send("**Meme**", {files: ["./images/meme53.jpg"]}); break;
       case 61: message.channel.send("**Meme**", {files: ["./images/meme54.jpg"]}); break;
-
-
+      case 62: message.channel.send("**Meme**", {files: ["./images/meme55.jpg"]}); break;
   }
 
   }
