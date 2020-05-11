@@ -93,7 +93,7 @@ if(message.content.startsWith(prefix+"virgen")){
  
 
 if(message.content.startsWith(prefix+"meme")){
-  number = 79;
+  number = 81;
   var random = Math.floor (Math.random() * (number - 1 + 1)) + 1;
   switch (random) {
       case 1: message.channel.send("**Compra miembro**", {files: ["./images/1.jpg"]}); break;
