@@ -14,9 +14,13 @@ client.user.setActivity('Hyliedz Retro', { type: 'PLAYING' })
 });
 
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
+  const channel = member.guild.channels.cache.find(ch => ch.name === 'general');
   if (!channel) return;
-  channel.send(`Welcome to the server, ${member}`);
+  channel.send(`**Bienvenido al servidor, ${member}**`);
+});
+
+client.on ("guildMemberRemove", meber => {
+
 });
 
 client.on("message", (message) => {
@@ -90,7 +94,7 @@ if(message.content.startsWith(prefix+"virgen")){
  
 
 if(message.content.startsWith(prefix+"meme")){
-  number = 62;
+  number = 79;
   var random = Math.floor (Math.random() * (number - 1 + 1)) + 1;
   switch (random) {
       case 1: message.channel.send("**Compra miembro**", {files: ["./images/1.jpg"]}); break;
@@ -163,6 +167,15 @@ if(message.content.startsWith(prefix+"meme")){
       case 69: message.channel.send("**Meme**", {files: ["./images/meme62.jpg"]}); break;
       case 70: message.channel.send("**Meme**", {files: ["./images/meme63.jpg"]}); break;
       case 71: message.channel.send("**Meme**", {files: ["./images/meme64.jpg"]}); break;
+      case 72: message.channel.send("**Meme**", {files: ["./images/meme65.jpg"]}); break;
+      case 73: message.channel.send("**Meme**", {files: ["./images/meme66.jpg"]}); break;
+      case 74: message.channel.send("**Meme**", {files: ["./images/meme67.jpg"]}); break;
+      case 75: message.channel.send("**Meme**", {files: ["./images/meme68.jpg"]}); break;
+      case 76: message.channel.send("**Meme**", {files: ["./images/meme69.jpg"]}); break;
+      case 77: message.channel.send("**Meme**", {files: ["./images/meme70.jpg"]}); break;
+      case 78: message.channel.send("**Meme**", {files: ["./images/meme71.jpg"]}); break;
+      case 79: message.channel.send("**Meme**", {files: ["./images/meme72.jpg"]}); break;
+
   }
 
   }
