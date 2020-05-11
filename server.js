@@ -16,7 +16,7 @@ client.user.setActivity('Hyliedz Retro', { type: 'PLAYING' })
 client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.cache.find(ch => ch.name === 'general');
   if (!channel) return;
-  channel.send(`**Bienvenido al servidor, ${member}**`);
+  member.send(`**Bienvenido al servidor, ${member}**`);
 });
 
 client.on ("guildMemberRemove", meber => {
@@ -30,7 +30,6 @@ if(message.content.startsWith(prefix+"secret")){
   .addField("**Vanliedz**", "`!hr MUERTE AL DIOS VANLIEDZ`")
   .addField("**Invocar a Vanliedz**", "`!hr Van inv`")
   .addField("**Matar a Kotonoah**", "`!hr MUERTE A KOTONOAH`")
-  .addField("**Besar a alguien**", "`!hr kiss [Persona]`")
   .addField("**Adivinar cuando perderás la virginidad**", "`!hr virgen`")
   .addField("**Adivinar tu edad mental**", "`!hr mentalidad`")
   .addField("**Adivinar tu IQ**", "`!hr IQ`")
