@@ -154,7 +154,6 @@ if(message.content.startsWith(prefix+"meme")){
       case 60: message.channel.send("**Meme**", {files: ["./images/meme53.jpg"]}); break;
       case 61: message.channel.send("**Meme**", {files: ["./images/meme54.jpg"]}); break;
       case 62: message.channel.send("**Meme**", {files: ["./images/meme55.jpg"]}); break;
-
       case 63: message.channel.send("**Meme**", {files: ["./images/meme56.jpg"]}); break;
       case 64: message.channel.send("**Meme**", {files: ["./images/meme57.jpg"]}); break;
       case 65: message.channel.send("**Meme**", {files: ["./images/meme58.jpg"]}); break;
