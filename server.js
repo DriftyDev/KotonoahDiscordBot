@@ -206,6 +206,7 @@ if(message.content.startsWith(prefix+"help")){
   const embed = new Discord.MessageEmbed()
   .setDescription("**Ayuda**")
   .addField("**Moderación**", "`!hr m help`")
+  .addField("**Roleplay**", "`!hr rol help`")
   .addField("**Memes**", "`!hr meme`")
   .addField("**Perritos :D**", "`!hr dog`")
 
@@ -221,6 +222,15 @@ if(message.content.startsWith(prefix+"m help")){
   .addField("**Mutear**", "`!hr mute [Persona]` **(DESARROLLO)**")
   .addField("**Mutear por un tiempo**", "`!hr tempmute [Persona] [Tiempo]` **(DESARROLLO)**")
   .addField("**Unmutear**", "`!hr unmute [Persona]` **(DESARROLLO)**")
+
+  message.channel.send({embed});
+}
+if(message.content.startsWith(prefix+"rol help")){
+  const embed = new Discord.MessageEmbed()
+  .setDescription("**Ayuda**")
+  .addField("**Cartas**", "`!hr rol card`")
+  .addField("**(DESARROLLO)**", null)
+
 
   message.channel.send({embed});
 }
