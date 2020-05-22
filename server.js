@@ -3,6 +3,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const datos = require("./datos.json");
 const {Client, Attachment} = require("discord.js");
+const require = ('fs')
+let db = require("./db.json")
 let prefix = datos.prefix
 
 
@@ -16,8 +18,9 @@ client.user.setActivity('Hyliedz Retro', { type: 'PLAYING' })
 client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.cache.find(ch => ch.name === 'general');
   if (!channel) return;
-  member.send(`**Bienvenido al servidor, ${member}**`);
+  member.send(`**Bienvenido al servidor de discord de Hyliedz Retro, ${member}**`);
 });
+
 
 client.on ("guildMemberRemove", meber => {
 
