@@ -3,8 +3,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const datos = require("./datos.json");
 const {Client, Attachment} = require("discord.js");
-const require = ('fs')
-let db = require("./db.json")
 let prefix = datos.prefix
 
 
