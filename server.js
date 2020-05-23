@@ -20,7 +20,7 @@ client.on('guildMemberAdd', member => {
 });
 
 
-client.on ("guildMemberRemove", meber => {
+client.on ("guildMemberRemove", member => {
 
 });
 
@@ -40,7 +40,7 @@ if(message.content.startsWith(prefix+"secret")){
 
 }
 
-let member = message.mentions.members.first();
+let member = message.content.slice(13);
 
 
 
@@ -96,10 +96,10 @@ if(message.content.startsWith(prefix+"virgen")){
           numbercard = 4;
           var random = Math.floor (Math.random() * (numbercard - 1 + 1)) + 1;
           switch (random) {
-              case 1: message.channel.send("**" + message.author.username + " usa `El baneo definitivo`!** ** @[user.mention], insta kill**", {files: ["./images/card1.jpg"]}); break;
-              case 2: message.channel.send("**" + message.author.username + " usa `Ignoro del Staff`!** ** @[user.mention] Pierdes tu -99 de dignidad!**", {files: ["./images/card2.jpg"]}); break;
-              case 3: message.channel.send("**" + message.author.username + " usa `Pérdida de objetos`!** ** @[user.mention] Pierdes tus objetos!**", {files: ["./images/card3.jpg"]}); break;
-              case 4: message.channel.send("**" + message.author.username + " usa `Vanriguez es real`!** ** @[user.mention] -50 de vida**", {files: ["./images/card4.jpg"]}); break;
+              case 1: message.channel.send("**@" + message.author.username + " usa `El baneo definitivo`!** ** " + member +", insta kill**", {files: ["./images/card1.jpg"]}); break;
+              case 2: message.channel.send("**" + message.author.username + " usa `Ignoro del Staff`!** ** " + member + "Pierdes tu -99 de dignidad!**", {files: ["./images/card2.jpg"]}); break;
+              case 3: message.channel.send("**" + message.author.username + " usa `Pérdida de objetos`!** ** " + member + "Pierdes tus objetos!**", {files: ["./images/card3.jpg"]}); break;
+              case 4: message.channel.send("**" + message.author.username + " usa `Vanriguez es real`!** ** " + member + "-50 de vida**", {files: ["./images/card4.jpg"]}); break;
           }
           }
 
